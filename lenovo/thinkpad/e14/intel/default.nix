@@ -1,10 +1,6 @@
-{ lib, ... }:
+{ config, lib, pkgs, ... }:
 
 {
-  imports = [
-    ../.
-    ../../../../common/cpu/intel/comet-lake
-  ];
-
+  imports = [ ../. ];
   services.throttled.enable = lib.mkDefault true;
 }
